@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+#mobile-navigation {
+	padding: 20px;
+	color: #FFF;
+	text-align: center;
+	background-color: #000;
+	border-top: 2px solid #000;
+}
+
+#mobile-navigation>a {
+	color: #FFF;
+}
+
+nav {
+	background: #000;
+}
+
+.nav-menu {
+	display: none;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 0;
+	color: #FFFFFF;
+	background-color: #000;
+	font-size: 14px;
+}
+
+.nav-menu.expanded {
+	display: block;
+}
+
+.nav-item>a {
+	display: block;
+	padding: 10px 0;
+	border-top: 2px solid #000;
+	color: #FFF;
+	padding-left: 20px;
+}
+
+.sub-nav-group>li {
+	padding-left: 20px;
+	list-style: none;
+}
+
+.sub-nav-group>li:before {
+	content: "- ";
+}
+
+.sub-nav-group>li:last-child {
+	padding-bottom: 10px;
+}
+
+.sub-nav-group>li>a {
+	color: #FFFFFF;
+}
+
+#menu-button {
+	display: block;
+	color: #000;
+	text-decoration: none;
+	font-size: 2.5em;
+}
+
+#menu-button:hover {
+	text-decoration: underline;
+}
+
+.fa-chevron-down {
+	display: none;
+}
+/*---------------------------------------Desktop Media Queries -------------------------
+-----------------------------------------768px Media Query ----------------------------*/
+@media ( min-width : 768px) {
+	/*Reset the Menu ready for desktop*/
+	.fa-chevron-down {
+		display: inline;
+	}
+	#mobile-navigation {
+		display: none;
+	}
+	#nav-menu {
+		padding: 0;
+	}
+	/* menu button for mobile users */
+	#menu-button {
+		display: none;
+	}
+
+	/* mega menu list */
+	.nav-menu {
+		display: block;
+		position: relative;
+		list-style: none;
+		color:#000000;
+		margin: 0;
+		padding: 0;
+		z-index: 1;
+	}
+	/* a top level navigation item in the mega menu */
+	.nav-item {
+		position: relative;
+		list-style: none;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	.nav-item:first-child {
+		margin-left: 0px;
+	}
+	/* first descendant link within a top level navigation item */
+	.nav-item>a {
+		/*basic*/
+		position: relative;
+		padding: 0.5em 1em;
+		color: #FFF;
+		border: 0;
+		text-decoration: none;
+		background-color: #000;
+	}
+	/* focus/open states of first descendant link within a top level 
+           navigation item */
+	.nav-item>a:focus, .nav-item>a.open, .nav-item>a:hover {
+		background-color: #FFF;
+		color: #000;
+		z-index: 2;
+		text-decoration: underline;
+	}
+	/* open state of first descendant link within a top level 
+           navigation item */
+	.nav-item>a.open {
+		background-color: #FFF;
+		color: #000;
+	}
+	/* active state of first descendant link within a top level 
+           navigation item */
+	.nav-item>a.active {
+		background-color: #FFF;
+		color: #000;
+		z-index: 1;
+	}
+	/* sub-navigation panel */
+	.sub-nav {
+		/*basic*/
+		position: absolute;
+		display: none;
+		top: 3em;
+		padding: 0.5em 1em;
+		background-color: #FFF;
+		min-width: 100%;
+	}
+	/* sub-navigation panel open state */
+	.sub-nav.open {
+		display: inline-block;
+		z-index: 3;
+	}
+	/* list of items within sub-navigation panel */
+	.sub-nav ul {
+		vertical-align: top;
+		margin: 0 1em 0 0;
+		padding: 0;
+	}
+	/* list item within sub-navigation panel */
+	.sub-nav li {
+		display: block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	}
+	.sub-nav a {
+		color: #000;
+	}
+	.sub-nav-group>li>a {
+	color: #000;
+	}
+
+}

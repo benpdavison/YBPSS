@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #000;
+	font-size: 14px;
+	line-height: 2;
+}
+
+a {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.container {
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 0;
+}
+
+/*Header*/
+header {
+	display: inline-block;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+}
+
+header>p {
+	text-align: center;
+	font-size: 16px;
+}
+
+img.site-logo, #logoCanvas {
+	margin-top: 5px;
+	width: 250px;
+	height: 81px;
+}
+
+.site-logo-link {
+	width: 100%;
+}
+
+.site-description {
+	text-align: center;
+	font-size: 24px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-bottom: 2px solid #000;
+	border-top: 2px solid #000;
+}
+
+a.colorchange {
+	font-size: 22px;
+}
+
+#cookie-law {
+	font-family: sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 101;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+	color: #000;
+	background-color: #99FF99;
+}
+
+.close-cookie-banner {
+	padding:5px;
+	line-height:14px;
+	font-size:14px;
+}
+
+/* Navigation This is here in case javascript is disabled and mega menu not accesible. */
+#nav {
+	font-size: 12px;
+	width: 100%;
+}
+
+.nav-tabs {
+	border-bottom: none;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
+	{
+	color: #fff;
+	background-color: #000;
+	border: 2px solid #000;
+	border-bottom-color: transparent;
+	cursor: default;
+}
+
+
+/* Side Bar */
+.sidebar {
+	border-top: 2px solid #000;
+	padding-bottom: 10px;
+}
+
+.sidebar>img {
+	width: 100%;
+}
+
+.sidebar>p {
+	font-size: 16px;
+}
+/* Main Content */
+.article-container {
+	border-top: 2px solid #000;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+article>h3 {
+	text-align: center;
+}
+
+article>p, article>li, article>ul, article>a {
+	font-size: 16px;
+}
+
+article>.colorThemes>p {
+	text-align: center;
+}
+
+button {
+	margin: 5px 5px 5px 5px;
+	padding: 0;
+}
+
+.imgMap {
+	max-width: 450px;
+	float: right;
+}
+
+input {
+	width: 100%;
+}
+input[type=radio]{
+	width:10%;
+}
+
+textarea {
+	width: 100%;
+	height: 200px;
+}
+
+#hiddenFormCheckbox {
+	display: none;
+}
+
+.video-js {
+	width: 100%;
+	height: auto;
+}
+
+.photo-gallery-container {
+	width: 100%;
+}
+
+.photo-gallery-container>.square {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	float: left;
+	margin: 5px 5px 5px 5px;
+	background: #000;
+}
+
+.photo-gallery-container>.square>a>img {
+	max-height: 400px;
+	margin: -100px 0 0 -200px;
+}
+
+.photo-gallery-container>img.single-photo {
+	max-width: 100%;
+}
+.photo-review-container > .review-panel {
+	margin-bottom:10px;
+	overflow:auto;
+	border-bottom:solid thin #000000;
+}
+.photo-review-container > .review-panel > .review-photo > a > img {
+	max-width:100%;
+}
+.photo-review-container > .review-panel > .review-photo {
+	max-width:40%;
+}
+.photo-review-container > .review-panel > .review-photo{
+	float:left;
+	clear:left;
+}
+.photo-review-container > .review-panel > .review-details{
+	float:left;
+	width:59%;
+	margin-left:1%;
+}
+.photo-review-container > .review-panel > .review-inputs{
+	width:100%;
+}
+.photo-review-container > .review-panel > .review-buttons{
+	float:right;
+}
+.require {
+	color: red;
+}
+/* Footer */
+.footer-container {
+	padding-top: 10px;
+	padding-right: 10px;
+	color: #fff;
+	background-color: #000;
+	font-size: 16px;
+}
+
+.footer-address {
+	text-align: right;
+}
+
+#noscript-warning {
+	font-family: sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 101;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+	color: #fff;
+	background-color: #ae0000;
+	padding: 5px 0 5px 0;
+}
+
+#noscript-padding {
+	padding-top: 1.9em;
+}
+
+/* Media Queries */
+@media ( min-width : 480px) {
+	img.site-logo, #logoCanvas {
+		width: 302px;
+		height: 92px;
+	}
+}
+/* ---------------------------------------- 768 px Media Query -----------------------------------*/
+@media ( min-width : 768px) {
+	img.site-logo, #logoCanvas {
+		width: 422px;
+		height: 137px;
+	}
+	.container {
+		border-left: 2px solid #000;
+		border-right: 2px solid #000;
+		border-bottom: 2px solid #000;
+	}
+	.sidebar {
+		border-top: none;
+		border-left: 2px solid #000;
+	}
+	input {
+		width: 50%;
+	}
+}
+/* ---------------------------------------- 992 px Media Query -----------------------------------*/
+@media ( min-width : 992px) {
+	img.site-logo {
+		width: 514px;
+		height: 167px;
+	}
+	/* css for when javascript disabled */
+	.noJSmenu {
+		overflow: hidden;
+		padding-left: 10px;
+		font-size: 12px;
+		width: 100%;
+	}
+	.noJSitem {
+		list-style: none;
+		float: left;
+		padding-left: 5px;
+		padding-right: 5px;
+		border-right: solid thin #000;
+	}
+	.noJSitem>.sub-nav>.sub-nav-group {
+		padding-left: 15px;
+	}
+	.noJSitem:first-child {
+		padding-left: 0px;
+	}
+	.noJSitem:last-child {
+		padding-right: 0px;
+		border-right: none;
+	}
+	#mobile-navigation {
+		display: none;
+	}
+	/*-----------------------------*/
+
+}
+/* ---------------------------------------- Audio Description Button on Media Player CSS -----------------------------------*/
+ .vjs-default-skin .vjs-control.vjs-AD-button {
+         display: block;
+		 font-size: 1.5em;
+         line-height: 2;
+         position: relative;
+         top: 0;
+         float:right;
+		 left: 10px;
+         height: 100%;
+         text-align: center;
+         cursor: pointer;
+         }
